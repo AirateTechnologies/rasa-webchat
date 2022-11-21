@@ -208,13 +208,6 @@ export default React.forwardRef((props, ref) => (
 
 export const selfMount = (props, element = null) => {
   const load = () => {
-
-    for (let i=0; i<window.localStorage.length; i++) {
-      let key = window.localStorage.key(i);
-      if (key.includes("cookiename_")) {
-      window.localStorage.removeItem(key)
-      }
-    }
     window.localStorage.removeItem("chat_session")
     window.localStorage.removeItem("rasaWebchatPro")
 
