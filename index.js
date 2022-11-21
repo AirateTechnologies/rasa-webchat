@@ -208,7 +208,9 @@ export default React.forwardRef((props, ref) => (
 
 export const selfMount = (props, element = null) => {
   const load = () => {
-    window.localStorage.clear()
+    window.localStorage.removeItem("chat_session")
+    window.localStorage.removeItem("rasaWebchatPro")
+
     if (element === null) {
       const node = document.createElement('div');
       node.setAttribute('id', 'rasaWebchatPro');
